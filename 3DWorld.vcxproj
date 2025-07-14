@@ -104,13 +104,13 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>F:\Programming\Projects\3DWorld\external\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)external\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>F:\Programming\Projects\3DWorld\external\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(ProjectDir)external\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>glew32.lib;opengl32.lib;sfml-graphics.lib;sfml-window.lib;sfml-system.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -137,6 +137,9 @@
     <ClCompile Include="src\geometry\Frustum.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\physics\AABB.cpp" />
+    <ClCompile Include="src\shaders\ShaderHandler.cpp" />
+    <ClCompile Include="src\shaders\ShaderProgram.cpp" />
+    <ClCompile Include="src\shaders\SimpleShader.cpp" />
     <ClCompile Include="src\states\BaseState.cpp" />
     <ClCompile Include="src\states\MainMenuState.cpp" />
   </ItemGroup>
@@ -150,6 +153,9 @@
     <ClInclude Include="src\geometry\Plane.h" />
     <ClInclude Include="src\math\MathUtils.h" />
     <ClInclude Include="src\physics\AABB.h" />
+    <ClInclude Include="src\shaders\ShaderHandler.h" />
+    <ClInclude Include="src\shaders\ShaderProgram.h" />
+    <ClInclude Include="src\shaders\SimpleShader.h" />
     <ClInclude Include="src\states\BaseState.h" />
     <ClInclude Include="src\states\MainMenuState.h" />
     <ClInclude Include="src\utils\Singleton.h" />

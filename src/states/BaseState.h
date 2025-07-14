@@ -16,5 +16,7 @@ public:
 	virtual void fixed_update(Camera& cam, float delta_time) = 0;
 
 
-private:
+protected:
+	Application& m_application; 
+	Camera* m_camera = nullptr; 
 };
