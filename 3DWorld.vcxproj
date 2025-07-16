@@ -136,29 +136,45 @@
     <ClCompile Include="src\entities\Camera.cpp" />
     <ClCompile Include="src\geometry\Frustum.cpp" />
     <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\Model.cpp" />
     <ClCompile Include="src\physics\AABB.cpp" />
+    <ClCompile Include="src\renderer\SFMLRenderer.cpp" />
+    <ClCompile Include="src\renderer\SimpleRenderer.cpp" />
+    <ClCompile Include="src\shaders\ChunkShader.cpp" />
     <ClCompile Include="src\shaders\ShaderHandler.cpp" />
     <ClCompile Include="src\shaders\ShaderProgram.cpp" />
     <ClCompile Include="src\shaders\SimpleShader.cpp" />
     <ClCompile Include="src\states\BaseState.cpp" />
     <ClCompile Include="src\states\MainMenuState.cpp" />
+    <ClCompile Include="src\texture\Texture.cpp" />
+    <ClCompile Include="src\texture\TextureAtlas.cpp" />
+    <ClCompile Include="src\world\BlockID.h" />
+    <ClCompile Include="src\world\Block_Database.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Application.h" />
     <ClInclude Include="src\Constants.h" />
     <ClInclude Include="src\Display.h" />
     <ClInclude Include="src\entities\Camera.h" />
+    <ClInclude Include="src\entities\Cube.h" />
     <ClInclude Include="src\entities\Entity.h" />
     <ClInclude Include="src\geometry\Frustum.h" />
     <ClInclude Include="src\geometry\Plane.h" />
     <ClInclude Include="src\math\MathUtils.h" />
+    <ClInclude Include="src\Model.h" />
     <ClInclude Include="src\physics\AABB.h" />
+    <ClInclude Include="src\renderer\SFMLRenderer.h" />
+    <ClInclude Include="src\renderer\SimpleRenderer.h" />
+    <ClInclude Include="src\shaders\ChunkShader.h" />
     <ClInclude Include="src\shaders\ShaderHandler.h" />
     <ClInclude Include="src\shaders\ShaderProgram.h" />
     <ClInclude Include="src\shaders\SimpleShader.h" />
     <ClInclude Include="src\states\BaseState.h" />
     <ClInclude Include="src\states\MainMenuState.h" />
+    <ClInclude Include="src\texture\TextureAtlas.h" />
+    <ClInclude Include="src\texture\Texture.h" />
     <ClInclude Include="src\utils\Singleton.h" />
+    <ClInclude Include="src\world\BlockDatabase.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

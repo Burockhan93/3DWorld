@@ -3,12 +3,20 @@
 #include <fstream>
 #include <sstream>
 
-GLuint loadShaders(ShaderType type) {
+#include "../Constants.h"
+GLuint loadShaders(ShaderType type, bool useBlock) {
 
 	//Shader folder is hard coded, may change
-	std::string shaderFolder = "resources/shaders/";
+	std::string shaderFolder = Constants::RESOURCES + "shaders/";
 	std::string vertexShader = shaderFolder + getShaderFileName(type) + "_" + "vertex.glsl";
-	std::string fragmentShader = shaderFolder + getShaderFileName(type) + "_" + "fragment.glsl";
+	std::string fragmentShader;
+	if (useBlock) {
+		fragmentShader = shaderFolder + "block_fragment.glsl";
+	}
+	else {
+		fragmentShader = shaderFolder + getShaderFileName(type) + "_" + "fragment.glsl";
+	}
+	
 
 	std::string vertexShaderCode = readShaderFile(vertexShader);
 	std::string fragmentShaderCode = readShaderFile(fragmentShader);

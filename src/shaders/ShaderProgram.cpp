@@ -1,8 +1,8 @@
 #include "ShaderProgram.h"
 #include <stdexcept>
 
-ShaderProgram::ShaderProgram(ShaderType type) {
-	m_programID = loadShaders(type);
+ShaderProgram::ShaderProgram(ShaderType type, bool useBlock) {
+	m_programID = loadShaders(type,useBlock);
 	if (m_programID == 0) {
 		throw std::runtime_error("Failed to load shader program.");
 	}
@@ -24,6 +24,9 @@ void ShaderProgram::loadInt(GLuint location, int value) {
 void ShaderProgram::loadFloat(GLuint location, float value) {
 	glUniform1f(location, value);
 }
+//glUniform2fv expects a pointer, whereas glUniform2f a value.
+// thats why we use &value[0] to get the pointer to the first element of the Vec2 array.
+// also on matrices the same
 void ShaderProgram::loadVec2(GLuint location, const Vec2& value) {
 	glUniform2fv(location, 1, &value[0]);
 }

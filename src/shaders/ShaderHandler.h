@@ -25,7 +25,7 @@ std::string getShaderFileName(ShaderType type) {
 	}
 }
 
-GLuint loadShaders(ShaderType type);
+GLuint loadShaders(ShaderType type, bool useBlock);
 GLuint compileShader(const GLchar* source, GLenum type);
 GLuint createShaderProgram(GLuint vertexShaderID, GLuint fragmentShaderID);
 std::string readShaderFile(const std::string& shaderType);

@@ -6,7 +6,7 @@
 #include "ShaderHandler.h"
 class ShaderProgram {
 public:
-	ShaderProgram(ShaderType type);
+	ShaderProgram(ShaderType type, bool useBlock);
 	virtual ~ShaderProgram();
 	virtual void bind();
 	virtual void unbind();
